@@ -1,7 +1,7 @@
 # UiContextMenu
 Class to create the context menu for interaction with users
 
-[![](http://m-ulyanov.github.io/UiContextMenu/UiContextMenu-promo.png)](https://github.com/M-Ulyanov/UiContextMenu)
+[![](http://m-ulyanov.github.io/UiContextMenu/UiContextMenu-promo-2.png)](https://github.com/M-Ulyanov/UiContextMenu)
 
 
 ##Getting started
