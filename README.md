@@ -48,9 +48,10 @@ menu.show();
 `hide` - hide menu<br>
 `updateStructure` - update structure<br>
 `getIsOpen` - get state menu<br>
+
 Example: <br>
 ```javascript 
-    let state = menu.getIsOpen();
+let state = menu.getIsOpen();
 ```
 
 
@@ -58,11 +59,12 @@ Example: <br>
 `context-menu-select` - click item menu<br>
 `context-menu-show` - show menu<br>
 `context-menu-hide` - hide menu <br>
+
 Example: <br>
 ```javascript 
 document.body.addEventListener('context-menu-show', function(event) {
-	console.log(event);
-    console.log('SHOW');
+  console.log(event);
+  console.log('SHOW');
 }, false);
 ```
 
