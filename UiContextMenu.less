@@ -1,0 +1,178 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic';
+
+
+.container-ui-context-menu {
+  display: none;
+  position: absolute;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  border-radius: 5px;
+  * {
+    box-sizing: border-box;
+  }
+
+  //
+  &.is-open {
+    display: block;
+    -webkit-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
+  }
+  &.is-submenu {
+    left: 100%;
+    top: 0;
+    z-index: 3;
+  }
+
+}
+
+.b-ui-context-menu-item {
+  width: 200px;
+  padding: 0.5em 0.75em;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  &:before {
+    content: '';
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    z-index: 1;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+
+
+  //
+  &.has-icon {
+    padding-left: 2.15em;
+  }
+
+  &.has-separator {
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &.is-disabled {
+    cursor: default;
+    &:before {
+      display: none;
+    }
+  }
+
+
+  // Inner elements
+  .ui-context-menu-item__name {
+    position: relative;
+    z-index: 2;
+  }
+
+  .ui-context-menu-item__icon-custom {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    margin-top: -0.55em;
+    z-index: 2;
+    line-height: 1em;
+  }
+  .ui-context-menu-item__icon-parent {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    z-index: 2;
+  }
+
+
+}
+
+
+
+// Themes
+@blue: #15A4FA;
+@red: #E85350;
+@green: #24CF5F;
+@yellow: #FCC04D;
+@gray: #303338;
+
+.b-ui-context-menu-item {
+
+  &.ui-context-menu-theme-blue {
+    background: @blue;
+    &:before {
+      background: darken(@blue, 5%);
+    }
+    &.is-disabled {
+      background: lighten(@blue, 7%);
+      color: lighten(@blue, 20%);
+    }
+  }
+
+  &.ui-context-menu-theme-red {
+    background: @red;
+    &:before {
+      background: darken(@red, 5%);
+    }
+    &.is-disabled {
+      background: lighten(@red, 7%);
+      color: lighten(@red, 20%);
+    }
+  }
+
+  &.ui-context-menu-theme-green {
+    background: @green;
+    &:before {
+      background: darken(@green, 5%);
+    }
+    &.is-disabled {
+      background: lighten(@green, 7%);
+      color: lighten(@green, 30%);
+    }
+  }
+
+  &.ui-context-menu-theme-yellow {
+    background: @yellow;
+    &:before {
+      background: darken(@yellow, 5%);
+    }
+    &.is-disabled {
+      background: lighten(@yellow, 7%);
+      color: lighten(@yellow, 25%);
+    }
+  }
+
+  &.ui-context-menu-theme-gray {
+    background: @gray;
+    &:before {
+      background: darken(@gray, 5%);
+    }
+    &.is-disabled {
+      background: lighten(@gray, 5%);
+      color: lighten(@gray, 25%);
+    }
+  }
+
+}
+
+
+// Animation
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

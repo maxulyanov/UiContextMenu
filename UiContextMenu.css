@@ -1,0 +1,144 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic';
+.container-ui-context-menu {
+  display: none;
+  position: absolute;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  border-radius: 5px;
+}
+.container-ui-context-menu * {
+  box-sizing: border-box;
+}
+.container-ui-context-menu.is-open {
+  display: block;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+.container-ui-context-menu.is-submenu {
+  left: 100%;
+  top: 0;
+  z-index: 3;
+}
+.b-ui-context-menu-item {
+  width: 200px;
+  padding: 0.5em 0.75em;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+}
+.b-ui-context-menu-item:before {
+  content: '';
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  z-index: 1;
+}
+.b-ui-context-menu-item:hover:before {
+  width: 100%;
+}
+.b-ui-context-menu-item.has-icon {
+  padding-left: 2.15em;
+}
+.b-ui-context-menu-item.has-separator:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+.b-ui-context-menu-item.is-disabled {
+  cursor: default;
+}
+.b-ui-context-menu-item.is-disabled:before {
+  display: none;
+}
+.b-ui-context-menu-item .ui-context-menu-item__name {
+  position: relative;
+  z-index: 2;
+}
+.b-ui-context-menu-item .ui-context-menu-item__icon-custom {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  margin-top: -0.55em;
+  z-index: 2;
+  line-height: 1em;
+}
+.b-ui-context-menu-item .ui-context-menu-item__icon-parent {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 2;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-blue {
+  background: #15A4FA;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-blue:before {
+  background: #0598f0;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-blue.is-disabled {
+  background: #38b2fb;
+  color: #79cbfc;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-red {
+  background: #E85350;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-red:before {
+  background: #e53d39;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-red.is-disabled {
+  background: #ec7270;
+  color: #f4acaa;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-green {
+  background: #24CF5F;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-green:before {
+  background: #20b955;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-green.is-disabled {
+  background: #3add72;
+  color: #9eeeba;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-yellow {
+  background: #FCC04D;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-yellow:before {
+  background: #fcb734;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-yellow.is-disabled {
+  background: #fdcc70;
+  color: #feecca;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-gray {
+  background: #303338;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-gray:before {
+  background: #24262a;
+}
+.b-ui-context-menu-item.ui-context-menu-theme-gray.is-disabled {
+  background: #3c4046;
+  color: #6b727d;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
