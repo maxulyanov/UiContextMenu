@@ -1,0 +1,80 @@
+html {
+  height: 100%;
+  font-size: 14px;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  background: #556379;
+  background: -moz-linear-gradient(-45deg, #556379 0%, #71687e 100%);
+  background: -webkit-linear-gradient(-45deg, #556379 0%, #71687e 100%);
+  background: linear-gradient(135deg, #556379 0%, #71687e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#556379', endColorstr='#71687e', GradientType=1);
+}
+body * {
+  box-sizing: border-box;
+}
+.header {
+  background: #1d1d1d;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.header a {
+  color: #FFF;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+}
+.header a:hover {
+  transition: 0.5s;
+  border-bottom-color: #FFF;
+}
+.container-global {
+  width: 768px;
+  margin: 20px auto;
+}
+.container-example {
+  margin-bottom: 30px;
+}
+.container-example-area {
+  height: 200px;
+  border-radius: 3px;
+  background: #364760;
+}
+.b-example-title {
+  margin-bottom: 1rem;
+  color: #FFF;
+  font-size: 2rem;
+}
+.b-ui-button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  font-size: 1rem;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background-color: #364760;
+  color: #FFF;
+  padding: .7em 1em;
+  text-transform: none;
+  font-weight: 500;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+.b-ui-button:hover {
+  background-color: #2A394F;
+}
