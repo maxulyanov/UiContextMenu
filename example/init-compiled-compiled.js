@@ -219,7 +219,6 @@ document.body.addEventListener('context-menu-hide', function (event) {
 
 document.body.addEventListener('click', function (event) {
 	if (!event.target.classList.contains('js-ignore-body-click')) {
-		event.preventDefault();
 		hideMenus();
 	}
 });
