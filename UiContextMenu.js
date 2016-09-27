@@ -34,7 +34,7 @@
 	const defaultOptions = {
 		theme: 'blue',
 		containerClass: ''
-	};
+	}; 
 
 
 	class UiContextMenu {
